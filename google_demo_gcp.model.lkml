@@ -9,3 +9,4 @@ datagroup: google_demo_gcp_default_datagroup {
 }
 
 persist_with: google_demo_gcp_default_datagroup
+explore: training_input_data {}
