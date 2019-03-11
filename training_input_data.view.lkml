@@ -195,7 +195,7 @@ view: training_input_data {
   }
 
   measure: pr_cnt {
-    type: number
+    type: max
     sql: ${TABLE}.pr_cnt ;;
   }
 
@@ -229,8 +229,8 @@ view: training_input_data {
     sql: ${TABLE}.provtyps ;;
   }
 
-  dimension: ratio_paid_claim {
-    type: string
+  measure: ratio_paid_claim {
+    type: average
     sql: ${TABLE}.ratio_paid_claim ;;
   }
 
