@@ -51,8 +51,8 @@ view: training_input_data {
     sql: ${TABLE}.bus_unit ;;
   }
 
-  dimension: claimdt_covertodt_diff {
-    type: string
+  measure: claimdt_covertodt_diff {
+    type: average
     sql: ${TABLE}.claimdt_covertodt_diff ;;
   }
 
@@ -92,7 +92,7 @@ view: training_input_data {
   }
 
   measure: dist_cnt_product_id {
-    type: number
+    type: count_distinct
     sql: ${TABLE}.dist_cnt_product_id ;;
   }
 
@@ -172,14 +172,16 @@ view: training_input_data {
   }
 
   dimension: paid1 {
-    type: string
+    type: number
     sql: ${TABLE}.paid1 ;;
   }
 
   measure: Amount_Paid
   {
-    type: number
+    type: sum
     sql: ${TABLE}.paid1 ;;
+    value_format: "[$USD]0.0,,,\"BN\""
+
   }
 
   dimension: pos_code1 {
