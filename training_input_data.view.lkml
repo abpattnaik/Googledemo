@@ -176,6 +176,12 @@ view: training_input_data {
     sql: ${TABLE}.paid1 ;;
   }
 
+  measure: Amount_Paid
+  {
+    type: number
+    sql: ${TABLE}.paid1 ;;
+  }
+
   dimension: pos_code1 {
     type: string
     sql: ${TABLE}.pos_code1 ;;
