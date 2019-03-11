@@ -51,8 +51,8 @@ view: training_input_data {
     sql: ${TABLE}.bus_unit ;;
   }
 
-  measure: claimdt_covertodt_diff {
-    type: number
+  dimension: claimdt_covertodt_diff {
+    type: string
     sql: ${TABLE}.claimdt_covertodt_diff ;;
   }
 
@@ -122,7 +122,7 @@ view: training_input_data {
   }
 
   measure: hospital_duration {
-    type: number
+    type: count_distinct
     sql: ${TABLE}.hospital_duration ;;
   }
 
